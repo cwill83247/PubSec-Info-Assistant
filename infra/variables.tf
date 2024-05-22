@@ -249,13 +249,13 @@ variable "appServicePlanName" {
 variable "appServiceSkuSize" {
   description = "The size of the app service plan for the IA website. Must match with the tier value in appServiceSkuTier."
   type = string
-  default = "S1"
+  default = "F1"      /** was S1 **/
 }
 
 variable "appServiceSkuTier" {
   description = "The tier of the app service plan for the IA website. Must match with the size value in appServiceSkuSize."
   type = string
-  default = "Standard"
+  default = "Free"    /** was Standard **/
   
 }
 
@@ -267,13 +267,13 @@ variable "enrichmentAppServicePlanName" {
 variable "enrichmentAppServiceSkuSize" {
   description = "The size of the app service plan for the enrichment service. Must match with the tier value in enrichmentAppServiceSkuTier."
   type = string
-  default = "P1v3"
+  default = "F1"    /** was P1v3  **/
 }
 
 variable "enrichmentAppServiceSkuTier" {
   description = "The tier of the app service plan for the enrichment service. Must match with the size value in enrichmentAppServiceSkuSize."
   type = string
-  default = "PremiumV3"
+  default = "Free"    /** was PremiumV3 **/
 }
 
 variable "logAnalyticsName" {
@@ -304,13 +304,13 @@ variable "functionsAppName" {
 variable "functionsAppSkuSize" {
   description = "The size of the app service plan for the functions app. Must match with the tier value in functionsAppSkuTier."
   type = string
-  default = "S2"
+  default = "F1"       /** was S2 **/
 }
 
 variable "functionsAppSkuTier" {
   description = "The tier of the app service plan for the functions app. Must match with the size value in functionsAppSkuSize."
   type = string
-  default = "Standard"
+  default = "Free"   /** was Standard **/
 }
 
 variable "videoIndexerName" {
@@ -325,7 +325,7 @@ variable "searchServicesName" {
 
 variable "searchServicesSkuName" {
   type    = string
-  default = "standard"
+  default = "free"        /** was standard  (lower case intentional) **/
 }
 
 variable "storageAccountName" {
